@@ -1,0 +1,16 @@
+<p>detail works!</p>
+<h1 (click)="tab()">identifiant :{{identifiant}}</h1>
+<img width="300px" height="200px" [src]="t[a]._image" 
+         class="img-fluid img-thumbnail"/>
+<div class="col-lg-2">
+    <ul class="list-group">
+    <li class="list-group-item list-group-item-primary"> {{t[a].nom}}</li>
+    <li class=" list-group-item list-group-item-warning"> {{t[a].marque | uppercase}} </li>
+    <li class=" list-group-item list-group-item-info"> {{t[a].prix | pipe}}</li>
+    <li *ngIf="!t[a].diponibilite; else aa"class="list-group-item list-group-item-success">Disponible </li>
+    <ng-template #aa class="list-group-item list-group-item-danger"> Non Disponible</ng-template>
+    <li class=" list-group-item list-group-item-danger">{{t[a]._date | date}}</li>
+    </ul>
+    </div>
+
+
